@@ -10,14 +10,14 @@ terraform {
     bucket               = "devops-recepie-app-bucket"
     key                  = "tf-state-deploy"
     workspace_key_prefix = "tf-state-deploy-env"
-    region               = "eu-north-1"
+    region               = "us-rast-1"
     encrypt              = true
     dynamodb_table       = "devops-recipe-app-lock"
   }
 }
 
 provider "aws" {
-  region = "eu-north-1"
+  region = "us-east-1"
   default_tags {
     tags = {
       Environment = terraform.workspace
