@@ -7,11 +7,11 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "devops-recepie-app-bucket"
+    bucket         = "purvenderbucket"
     key            = "tf-state-setup"
     region         = "us-east-1"
     encrypt        = true
-    dynamodb_table = "devops-recipe-app-lock"
+    dynamodb_table = "purvendertable"
   }
 }
 
