@@ -7,12 +7,12 @@ terraform {
   }
 
   backend "s3" {
-    bucket               = "devops-recipe-app-api-state"
+    bucket               = "devops-recepie-app-bucket"
     key                  = "tf-state-deploy"
     workspace_key_prefix = "tf-state-deploy-env"
     region               = "eu-north-1"
     encrypt              = true
-    dynamodb_table       = "devops-recipe-app-api-tf-lock"
+    dynamodb_table       = "devops-recipe-app-lock"
   }
 }
 
