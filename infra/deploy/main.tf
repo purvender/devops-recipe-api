@@ -7,17 +7,17 @@ terraform {
   }
 
   backend "s3" {
-    bucket               = "devops-recepie-app-bucket"
+    bucket               = "purvenderbucket"
     key                  = "tf-state-deploy"
     workspace_key_prefix = "tf-state-deploy-env"
-    region               = "eu-north-1"
+    region               = "us-east-1"
     encrypt              = true
-    dynamodb_table       = "devops-recipe-app-lock"
+    dynamodb_table       = "purvendertable"
   }
 }
 
 provider "aws" {
-  region = "eu-north-1"
+  region = "us-east-1"
   default_tags {
     tags = {
       Environment = terraform.workspace

@@ -5,17 +5,17 @@ variable "prefix" {
 
 variable "project" {
   description = "Project name for tagging resources"
-  default     = "recipe-app-api"
+  default     = "recipe-app-api-2"
 }
 
 variable "contact" {
   description = "Contact email for tagging resources"
-  default     = "mark@example.com"
+  default     = "purvender@example.com"
 }
 
 variable "db_username" {
   description = "Username for the recipe app api database"
-  default     = "recipeapp"
+  default     = "recipeapp2"
 }
 
 variable "db_password" {
