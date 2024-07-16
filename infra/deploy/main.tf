@@ -10,14 +10,14 @@ terraform {
     bucket               = "purvenderbucket"
     key                  = "tf-state-deploy"
     workspace_key_prefix = "tf-state-deploy-env"
-    region               = "us-east-1"
+    region               = "eu-north-1"
     encrypt              = true
     dynamodb_table       = "purvendertable"
   }
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = "eu-north-1"
   default_tags {
     tags = {
       Environment = terraform.workspace
