@@ -5,7 +5,7 @@ variable "prefix" {
 
 variable "project" {
   description = "Project name for tagging resources"
-  default     = "recipe-app-api-2"
+  default     = "recipe-app-api"
 }
 
 variable "contact" {

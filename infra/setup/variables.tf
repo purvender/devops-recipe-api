@@ -10,7 +10,7 @@ variable "tf_state_lock_table" {
 
 variable "project" {
   description = "Project name for tagging resources"
-  default     = "recipe-app-api2"
+  default     = "recipe-app-api"
 }
 
 variable "contact" {
