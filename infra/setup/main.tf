@@ -7,16 +7,16 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "purvenderbucket"
-    key            = "tf-state-setup"
-    region         = "eu-north-1"
+    bucket         = "hoodabucket"
+    key            = "state-setup"
+    region         = "us-east-1"
     encrypt        = true
-    dynamodb_table = "purvendertable"
+    dynamodb_table = "hoodatable"
   }
 }
 
 provider "aws" {
-  region = "eu-north-1"
+  region = "us-east-1"
 
   default_tags {
     tags = {
