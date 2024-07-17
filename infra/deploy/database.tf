@@ -35,10 +35,10 @@ resource "aws_db_instance" "main" {
   db_name                    = "recipe"
   allocated_storage          = 20
   storage_type               = "gp2"
-  engine                     = "mysql"
-  engine_version             = "8.0.28"
+  engine                     = "postgres"
+  engine_version             = "15.4-R3"
   auto_minor_version_upgrade = true
-  instance_class             = "db.t4g.micro"
+  instance_class             = "db.m5d.large"
   username                   = var.db_username
   password                   = var.db_password
   skip_final_snapshot        = true
@@ -51,4 +51,3 @@ resource "aws_db_instance" "main" {
     Name = "${local.prefix}-main"
   }
 }
-
