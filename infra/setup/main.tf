@@ -7,16 +7,16 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "devops-recepie-app-tf-bucket"
-    key            = "tf-state-setup"
-    region         = "eu-north-1"
+    bucket         = "hoodabucket"
+    key            = "state-setup"
+    region         = "us-east-1"
     encrypt        = true
-    dynamodb_table = "devops-recipe-app-tf-lock"
+    dynamodb_table = "hoodatable"
   }
 }
 
 provider "aws" {
-  region = "eu-north-1"
+  region = "us-east-1"
 
   default_tags {
     tags = {
